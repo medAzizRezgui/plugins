@@ -20,7 +20,7 @@ pstack skills use Cursor names. In Claude Code, read this file once per session,
 | `poteto-agent`, `comment-sicko` | `pstack:poteto-agent`, `pstack:comment-sicko` |
 | `readonly: true` | `subagent_type: "Explore"`. It keeps `Bash`, so the brief also says "do not edit files", and you check `git status` afterward. |
 | `readonly: false` | `general-purpose`. It keeps the session's MCP servers. |
-| `environment: "cloud"` | `isolation: "worktree"`. Name the branch or commit the worker checks out. |
+| `environment: "cloud"` | `isolation: "worktree"`. Name the branch or commit the worker checks out. When the repo's `CLAUDE.md` names its own worktree command, run it for the worker instead, omit `isolation`, and give the worker the folder. |
 | `environment: "local"` | Omit. |
 | `cloud_base_branch: <b>` | Tell the worker to check out `<b>` first. |
 | `run_in_background: true` | Omit. Subagents run in the background by default and notify you when they finish. |
