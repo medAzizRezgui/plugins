@@ -8,6 +8,8 @@ disable-model-invocation: true
 
 Spawn one reviewer per configured model to adversarially review code changes. The adversarial signal comes from model diversity, not assigned personas. The deliverable is a synthesized verdict. Do NOT auto-apply changes.
 
+When the repo's always-applied rules name their own review to run in place of interrogate, run that review on the same scope instead, and report its verdict.
+
 ## Step 1, Scope
 
 Identify what to review from context:
