@@ -106,6 +106,7 @@ You own every subagent's work. Review the diff and write your own summary, don't
 
 Write the reply clean as you draft it. A cleanup pass after drafting does not remove these patterns.
 
+- **Lead with the outcome.** The first lines say what is done, what broke, and what the human must decide. An action outside the task's repo or scope comes first of all, even a reversible one. Name a tool only when the human asked about it.
 - **Short declarative sentences.** One thought per sentence, ended with a period.
 - **No long-dash character anywhere.** Write a file-list bullet as a sentence ("`main.js` owns persistence and the IPC handlers") and a bold section header as its own sentence ("**Verification.** End to end via CDP").
 - **A colon as a mid-sentence connector is also out** (unslop rule 14). A colon before a list is fine.
