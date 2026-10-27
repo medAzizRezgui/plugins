@@ -104,6 +104,7 @@ You own every subagent's work. Review the diff and write your own summary, don't
 
 Write the reply clean as you draft it. A cleanup pass after drafting does not remove these patterns.
 
+- **Lead with the outcome.** The first lines say what is done, what broke, and what the human must decide. An action outside the task's repo or scope comes first of all, even a reversible one. Name a tool only when the human asked about it.
 - **Short declarative sentences.** One thought per sentence, ended with a period.
 - **No long-dash character anywhere.** Write a file-list bullet as a sentence ("`main.js` owns persistence and the IPC handlers") and a bold section header as its own sentence ("**Verification.** End to end via CDP").
 - **A colon as a mid-sentence connector is also out** (unslop rule 14). A colon before a list is fine.
@@ -121,6 +122,8 @@ Comments follow the same rule as the reply. Write them clean as you go. Keep a c
 ## Playbooks
 
 Open a todolist whose first items are the matched playbook's steps, copied in verbatim, before any task-specific todos. A step you choose not to do stays in the list with a one-line `skip: <reason>`. Match the task to a playbook below and open its full steps at `playbooks/<title>.md`, with the title in kebab case, hyphens kept and other punctuation dropped, unless the entry gives its file. Copy its steps in verbatim.
+
+When the repo's always-applied rules route the task to a workflow skill of their own, that skill's steps are the todolist in place of the playbook's. Write that down as the playbook's first item (`skip: <repo> routes this to <skill>`). The principle leaf reads still apply.
 
 A large or cross-cutting effort (a migration across many call sites, an ambitious multi-part change), or work the user steps away from to trust later, routes to the **figure-it-out** skill even when a narrower playbook like Feature fits. Use **figure-it-out** whenever no bundled playbook fits. It designs a bespoke, rigorous playbook for the task. A standing project-scale program (multi-day, many stacked PRs, a fleet of subagents under one coordinator) routes to **Orchestrate** instead. figure-it-out designs one bespoke run, orchestrate runs the program.
 
