@@ -37,6 +37,8 @@ pstack skills use Cursor names. In Claude Code, read this file once per session,
 | The `pstack-models.mdc` rule, `~/.cursor/rules/pstack-models.mdc` | `~/.claude/rules/pstack-models.md`. Claude Code loads it into every new session, so its role lines are already in context. If they are not, read the file. If the file or the role's line is missing, use the skill's default slug. |
 | A role value `<model> <effort>`, such as `opus high` | `model: "opus"` and `effort: "high"`. |
 
+When the `Agent` tool schema has no `effort` field, pass `model` only, and say once, at the first dispatch, that the reasoning budget was not set.
+
 ## setup-pstack
 
 Claude Code loads every `.md` file in `~/.claude/rules/` into each new session, so `setup-pstack` writes its rule there. Follow its steps with these changes:
